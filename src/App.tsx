@@ -3,17 +3,16 @@ import About from './sites/About';
 import Navigate from './sites/Navigate';
 import PageNotFound from './sites/PageNotFound';
 
+import config from "./config.json";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-const basename = "/app";
 
 function App() {
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={config.basepath}>
       <div>
         <Navigate />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
