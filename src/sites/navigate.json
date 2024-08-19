@@ -1,10 +1,10 @@
 [
     {
-        "herf": "/",
+        "href": "/",
         "title": "Home"
     },
     {
-        "herf": "/about",
+        "href": "/about",
         "title": "About"
     }
 ]
