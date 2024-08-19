@@ -1,8 +1,11 @@
 import "./navigate-style.css";
+import config from "../config.json";
+
 import navigateData from './navigate.json';
 import { useLocation } from "react-router-dom";
 
 function Navigate() {
+    const basepath = config.basepath;
     const location = useLocation();
     const currentPath = location.pathname;
 
@@ -11,7 +14,7 @@ function Navigate() {
             <ul>
                 {navigateData.map((item) => (
                     <li>
-                        <a className={currentPath === item.herf ? 'active' : ''} href={item.herf}>{item.title}</a>
+                        <a className={currentPath === basepath + item.herf ? 'active' : ''} href={basepath + item.herf}>{item.title}</a>
                     </li>
                 ))}
             </ul>

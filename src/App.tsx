@@ -7,8 +7,10 @@ import config from "./config.json";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
+  const basepath = config.basepath;
+
   return (
-    <BrowserRouter basename={config.basepath}>
+    <BrowserRouter basename={basepath}>
       <div>
         <Navigate />
         <Routes>
