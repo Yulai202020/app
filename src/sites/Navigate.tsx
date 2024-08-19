@@ -16,7 +16,7 @@ function Navigate() {
             <ul>
                 {navigateData.map((item) => (
                     <li>
-                        <a className={currentPath === item.href ? 'active' : ''} href={basepath + item.href}>{item.title}</a>
+                        <a className={currentPath === item.href ? 'active' : ''} href={basepath +"/#" + item.href.slice(1)}>{item.title}</a>
                     </li>
                 ))}
             </ul>
